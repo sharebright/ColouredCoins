@@ -16,5 +16,7 @@ namespace WebApplication.Models
         public Double Value { get; set; }
 
         public Boolean Featured { get; set; }
+
+        public IList<Models.Share> Shares { get; set; }
     }
 }

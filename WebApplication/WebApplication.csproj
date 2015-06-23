@@ -185,6 +185,7 @@
     <Compile Include="Models\PropertyViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Share.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IPropertyRepository.cs" />
     <Compile Include="Repositories\Mock.cs" />
