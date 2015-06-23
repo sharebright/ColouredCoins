@@ -10,13 +10,14 @@ namespace WebApplication.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            Models.HomeViewModel model = new Models.HomeViewModel();
+            model.FeaturedProperties = MvcApplication.GetPropertyRepository.All.Where(p => p.Featured == true).ToList();
+            return View(model);
         }
 
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
     }

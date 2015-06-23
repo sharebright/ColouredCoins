@@ -17,5 +17,13 @@ namespace WebApplication
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        internal static Repositories.IPropertyRepository GetPropertyRepository
+        {
+            get
+            {
+                return new Repositories.Mock();
+            }
+        }
     }
 }

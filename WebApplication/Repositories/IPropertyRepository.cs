@@ -8,5 +8,6 @@ namespace WebApplication.Repositories
 {
     public interface IPropertyRepository
     {
+        IQueryable<Models.PropertyViewModel> All { get; }
     }
 }
