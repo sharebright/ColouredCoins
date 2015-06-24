@@ -17,6 +17,8 @@ namespace WebApplication.Models
 
         public Boolean Featured { get; set; }
 
+        public String AssetAddress { get; set; }
+
         public IList<Models.Share> Shares { get; set; }
     }
 }

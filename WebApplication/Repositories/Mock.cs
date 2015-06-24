@@ -17,7 +17,8 @@ namespace WebApplication.Repositories
                         Name = "Bondi Beach",
                         Value = 2000000,
                         ID = "1",
-                        Featured = true
+                        Featured = true,
+                        AssetAddress = "mx5u3nqdPpzvEZ3vfnuUQEyHg3gHd8zrrH"
                     });
 
                 return mocks.AsQueryable<Models.PropertyViewModel>();
