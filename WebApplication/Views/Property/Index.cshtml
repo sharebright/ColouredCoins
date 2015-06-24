@@ -1,28 +1,28 @@
 ﻿@model IEnumerable<WebApplication.Models.PropertyViewModel>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
-
+<div class="row">
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.ID })
-        </td>
-    </tr>
+    <div class="col-sm-6 col-md-3">
+        <div class="thumbnail text-default">
+            <div class="overlay-container">
+                <img src="~/img/item-large.jpg">
+                <div class="overlay-content">
+                    <h3 class="h4 headline">@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <p>So you know you're getting a top quality property from an experienced team.</p>
+                </div><!-- /.overlay-content -->
+            </div><!-- /.overlay-container -->
+            <div class="thumbnail-meta">
+                <p><i class="fa fa-fw fa-home"></i> @Html.DisplayFor(modelItem => item.Description)</p>
+                <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
+            </div>
+            <div class="thumbnail-meta">
+                <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
+            </div>
+            <div class="thumbnail-meta">
+                <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">@Html.DisplayFor(modelItem => item.Value)</span> @Html.ActionLink("Details", "Details", new { id = item.ID }) <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div><!-- /.thumbnail -->
+    </div><!-- /.col -->
 }
+</div><!-- /.row -->
 
-</table>

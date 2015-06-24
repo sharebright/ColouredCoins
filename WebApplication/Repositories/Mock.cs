@@ -5,7 +5,7 @@ using System.Web;
 
 namespace WebApplication.Repositories
 {
-    public class Mock : IPropertyRepository, IUserRepository
+    public class Mock : IPropertyRepository
     {
         public IQueryable<Models.PropertyViewModel> All
         {
@@ -23,7 +23,10 @@ namespace WebApplication.Repositories
                 return mocks.AsQueryable<Models.PropertyViewModel>();
             }
         }
+    }
 
+    public class MockUserRepo : IUserRepository
+    {
         public IQueryable<Models.User> All
         {
             get
