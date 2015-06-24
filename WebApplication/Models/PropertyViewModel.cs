@@ -13,6 +13,8 @@ namespace WebApplication.Models
 
         public String Description { get; set; }
 
+        public String FeatureSummary { get; set; }
+
         public Double Value { get; set; }
 
         public Boolean Featured { get; set; }

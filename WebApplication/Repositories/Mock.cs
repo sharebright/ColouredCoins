@@ -15,10 +15,12 @@ namespace WebApplication.Repositories
                 mocks.Add(new Models.PropertyViewModel()
                     {
                         Name = "Bondi Beach",
+                        Description = "So you know you're getting a top quality property from an experienced team.",
                         Value = 2000000,
                         ID = "1",
                         Featured = true,
-                        AssetAddress = "mx5u3nqdPpzvEZ3vfnuUQEyHg3gHd8zrrH"
+                        AssetAddress = "mx5u3nqdPpzvEZ3vfnuUQEyHg3gHd8zrrH",
+                        FeatureSummary = "1460 Ft | 2 Bed | 1,5 Bath | 2 Garage"
                     });
 
                 return mocks.AsQueryable<Models.PropertyViewModel>();
