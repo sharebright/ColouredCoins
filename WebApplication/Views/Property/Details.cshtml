@@ -1,0 +1,23 @@
+﻿@model WebApplication.Models.PropertyViewModel
+
+<div class="col-sm-6 col-md-3">
+    <div class="thumbnail text-default">
+        <div class="overlay-container">
+            <img src="img/item-large.jpg">
+            <div class="overlay-content">
+                <h3 class="h4 headline">@Html.DisplayFor(model => model.Name)</h3>
+                <p>@Html.DisplayFor(model => model.Description)</p>
+            </div><!-- /.overlay-content -->
+        </div><!-- /.overlay-container -->
+        <div class="thumbnail-meta">
+            <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
+            <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
+        </div>
+        <div class="thumbnail-meta">
+            <i class="fa fa-fw fa-info-circle"></i> @Html.DisplayFor(model => model.FeatureSummary)
+        </div>
+        <div class="thumbnail-meta">
+            <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">@Html.DisplayFor(model => model.Value)</span> @Html.ActionLink("Details", "Details", new { id = model.ID }) <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
+        </div>
+    </div><!-- /.thumbnail -->
+</div><!-- /.col -->
