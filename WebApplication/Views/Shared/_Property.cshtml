@@ -15,7 +15,7 @@
                 <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
             </div>
             <div class="thumbnail-meta">
-                <i class="fa fa-fw fa-info-circle"></i> @Html.DisplayFor(modelItem => modelItem.FeatureSummary)
+                <i class="fa fa-fw fa-info-circle"></i> @Html.DisplayFor(modelItem => item.FeatureSummary)
             </div>
             <div class="thumbnail-meta">
                 <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">@Html.DisplayFor(modelItem => item.Value)</span> @Html.ActionLink("Details", "Details", new { id = item.ID }) <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
