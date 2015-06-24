@@ -27,7 +27,6 @@
                             <li><a href="#"><i class="text-light fa fa-lg fa-fw fa-twitter"></i></a></li>
                             <li><a href="#"><i class="text-light fa fa-lg fa-fw fa-facebook"></i></a></li>
                             <li><a href="#"><i class="text-light fa fa-lg fa-fw fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="text-light fa fa-lg fa-fw fa-pinterest"></i></a></li>
                         </ul>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -42,14 +41,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo-dark.png" alt="Website Logo">
+                    <img src="img/logo-dark.png" alt="Website Logo">
                 </a>
             </div>
             <!-- Navbar -->
             <div class="collapse navbar-collapse navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html">Home</a>
+                        @Html.ActionLink("Home", "Index")
                     </li>
                     <li class="dropdown">
                         <a href="#link" class="dropdown-toggle" data-toggle="dropdown">Real Estate <b class="caret"></b></a>
@@ -70,10 +69,17 @@
                     <li class="dropdown">
                         <a href="#link" class="dropdown-toggle" data-toggle="dropdown">Corporate <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact 1</a></li>
-                            <li><a href="contact_2.html">Contact 2</a></li>
+                            <li>@Html.ActionLink("About", "About")</li></li>
+                            <li>@Html.ActionLink("Contact", "Contact")</li>
                             <li><a href="login.html">Login/Signup</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#link" class="dropdown-toggle" data-toggle="dropdown">Investors <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">Account</a></li>
+                            <li>@Html.ActionLink("Account", "Account")</li>
+                            <li>@Html.ActionLink("Portfolio", "Portfolio")</li>
                         </ul>
                     </li>
                 </ul><!-- /.navbar-nav -->
